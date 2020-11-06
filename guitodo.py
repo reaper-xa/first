@@ -11,3 +11,4 @@ event, values = window.Read()
 if event == "ok":
     print(values["name"])
 window.close()
+"hello"
