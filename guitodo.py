@@ -1,11 +1,15 @@
 import PySimpleGUI as sg
 
 layout = [
-    [sg.Text("Enter your name", font=("Arial",16))],
-    [sg.Button("ok")]
+    [sg.Listbox(["app","games","movies"], font=("Arial",16), size =(40,5))],
+    [sg.InputText("", font=("Arial",16),size=(40,1), key = "list1")],
+    [sg.Button("Ok"), sg.Button("Exit")]
 ]
+
 
 window = sg.Window("First App", layout)
 event, values = window.Read()
-window.close()
 
+
+if event == "Exit":
+    window.close()
